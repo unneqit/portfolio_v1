@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({17:[function(require,module,exports) {
+})({8:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],12:[function(require,module,exports) {
+},{}],3:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,17 +132,17 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":17}],10:[function(require,module,exports) {
+},{"./bundle-url":8}],2:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/img/eiga-cover.png":[["0f20650b356f2f800f2a70570bd2a242.png",14],14],"./../assets/img/kwint-cover.png":[["41b3e6dd801c7464b1ab1c858ad6cf57.png",13],13],"./../assets/img/fixie-cover.png":[["fe7b32c4b726adfe820b31c523de5bb6.png",16],16],"./../assets/img/illu-cover.png":[["9ede08911e051319ba221cd584e7b04d.png",15],15],"_css_loader":12}],2:[function(require,module,exports) {
+},{"./../assets/img/eiga-cover.png":[["0f20650b356f2f800f2a70570bd2a242.png",5],5],"./../assets/img/kwint-cover.png":[["41b3e6dd801c7464b1ab1c858ad6cf57.png",4],4],"./../assets/img/fixie-cover.png":[["fe7b32c4b726adfe820b31c523de5bb6.png",6],6],"./../assets/img/illu-cover.png":[["9ede08911e051319ba221cd584e7b04d.png",7],7],"_css_loader":3}],1:[function(require,module,exports) {
 'use strict';
 
 require('./styles/styles.scss');
-},{"./styles/styles.scss":10}],18:[function(require,module,exports) {
+},{"./styles/styles.scss":2}],9:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -164,7 +164,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53921' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -265,5 +265,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[18,2])
+},{}]},{},[9,1])
 //# sourceMappingURL=/dist/quentin-lenglin-portfolio.map
